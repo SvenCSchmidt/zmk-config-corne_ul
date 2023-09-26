@@ -33,6 +33,7 @@
         compatible = "zmk,keymap";
 
         base {
+            label = "Base";
             bindings = <
 &kp ESC                           &kp Q        &kp W             &kp F              &kp P                &kp B        &kp J        &kp L                 &kp U               &kp Y                  &kp SEMI          &kp APOS
 &kp MINUS                         &bhm LGUI A  &bhm LEFT_ALT R   &bhm LEFT_SHIFT S  &bhm LEFT_CONTROL T  &kp G        &kp M        &bhm RIGHT_CONTROL N  &bhm RIGHT_SHIFT E  &bhm LEFT_ALT I        &bhm RIGHT_WIN O  &kp BSLH
@@ -42,6 +43,7 @@
         };
 
         numbers {
+            label = "Numbers";
             bindings = <
 &none  &kp N1      &kp N2    &kp N3     &kp N4      &kp N5       &kp N6       &kp N7      &kp N8     &kp N9    &kp N0      &none
 &none  &kp LGUI    &kp LALT  &kp LSHFT  &kp LCTRL   &kp MINUS    &kp APOS     &kp RCTRL   &kp RSHFT  &kp LALT  &kp RGUI    &none
@@ -51,6 +53,7 @@
         };
 
         nav {
+            label = "Nav";
             bindings = <
 &none  &kp INS    &kp DEL    &kp UP     &kp PAGE_UP    &kp LC(Y)            &none  &none      &none      &none     &none       &none
 &none  &kp HOME   &kp LEFT   &kp DOWN   &kp RIGHT      &kp END              &none  &kp RCTRL  &kp RSHFT  &kp LALT  &kp RGUI    &none
@@ -60,6 +63,7 @@
         };
 
         iso {
+            label = "ISO";
             bindings = <
 &none  &none      &none  &none                  &none  &none    &none  &none  &kp RA(Y)                &none  &none      &none
 &none  &kp RA(Q)  &none  &bhm LEFT_SHIFT RA(S)  &none  &none    &none  &none  &bhm RIGHT_SHIFT RA(N5)  &none  &kp RA(P)  &none
@@ -69,6 +73,7 @@
         };
 
         fun {
+            label = "Fun";
             bindings = <
 &none  &kp C_AC_HOME         &kp C_AC_SEARCH  &kp C_AC_REFRESH  &kp C_AC_BOOKMARKS  &none           &kp PRINTSCREEN  &kp F7  &kp F8  &kp F9  &kp F12  &none
 &none  &kp C_AL_MY_COMPUTER  &kp C_AL_MUSIC   &kp C_AL_MAIL     &kp K_EXEC          &kp C_BRI_UP    &kp SCROLLLOCK   &kp F4  &kp F5  &kp F6  &kp F11  &none
@@ -78,6 +83,7 @@
         };
 
         hardware {
+            label = "HW";
             bindings = <
 &none  &kp K_PLAY_PAUSE  &none       &none         &none         &none    &bt BT_CLR    &none         &bt BT_PRV    &bt BT_NXT    &none         &none
 &none  &kp K_STOP        &none       &none         &none         &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
@@ -87,6 +93,7 @@
         };
 
         numpad {
+            label = "Numpad";
             bindings = <
 &none  &none          &none            &none            &none         &none           &none  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &none
 &none  &kp KP_DIVIDE  &kp KP_ASTERISK  &kp KP_SUBTRACT  &kp KP_PLUS   &kp KP_EQUAL    &none  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none            &none
