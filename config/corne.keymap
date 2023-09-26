@@ -43,7 +43,7 @@
         };
 
         numbers {
-            label = "Numbers";
+            label = "Num";
             bindings = <
 &none  &kp N1      &kp N2    &kp N3     &kp N4      &kp N5       &kp N6       &kp N7      &kp N8     &kp N9    &kp N0      &none
 &none  &kp LGUI    &kp LALT  &kp LSHFT  &kp LCTRL   &kp MINUS    &kp APOS     &kp RCTRL   &kp RSHFT  &kp LALT  &kp RGUI    &none
@@ -93,7 +93,7 @@
         };
 
         numpad {
-            label = "Numpad";
+            label = "Calc";
             bindings = <
 &none  &none          &none            &none            &none         &none           &none  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &none
 &none  &kp KP_DIVIDE  &kp KP_ASTERISK  &kp KP_SUBTRACT  &kp KP_PLUS   &kp KP_EQUAL    &none  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none            &none
