@@ -11,7 +11,9 @@
             tapping-term-ms = <190>;// <---[[moderate duration]]
             quick-tap-ms = <0>;
             flavor = "balanced";
-            bindings = <&kp>, <&kp>;
+            bindings =
+                <&kp>,
+                <&kp>;
         };
     };
 };
@@ -43,20 +45,20 @@
         numbers {
             label = "Num";
             bindings = <
-&none  &kp INS    &kp DELETE  &kp UP_ARROW  &kp PG_UP  &kp LC(Y)    &kp PRINTSCREEN  &none      &none       &none     &none       &none
-&none  &kp HOME   &kp LEFT    &kp DOWN      &kp RIGHT  &kp END      &kp SCROLLLOCK   &kp RCTRL  &kp RSHFT   &kp LALT  &kp RGUI    &none
-&none  &kp LC(Z)  &kp LC(X)   &kp LC(C)     &kp PG_DN  &kp LC(V)    &kp PAUSE_BREAK  &none      &none       &kp RALT  &kp K_MENU  &none
-                              &kp ESC       &trans     &none        &kp ENTER        &kp SPACE  &kp DELETE
+&none  &kp N1      &kp N2    &kp N3     &kp N4      &kp N5       &kp N6       &kp N7      &kp N8     &kp N9    &kp N0      &none
+&none  &kp LGUI    &kp LALT  &kp LSHFT  &kp LCTRL   &kp MINUS    &kp APOS     &kp RCTRL   &kp RSHFT  &kp LALT  &kp RGUI    &none
+&none  &kp K_MENU  &kp RALT  &none      &kp LS(N9)  &kp LBKT     &kp RBKT     &kp RS(N0)  &kp BSLH   &kp RALT  &kp K_MENU  &none
+                             &kp ESC    &trans      &none        &lt 4 ENTER  &trans      &mo 6
             >;
         };
 
         nav {
             label = "Nav";
             bindings = <
-&none  &kp LS(NUMBER_1)  &kp LS(N2)          &kp LS(N3)     &kp LS(N4)     &kp LS(N5)    &kp LS(N6)  &kp LS(N7)     &kp LS(N8)     &kp LS(N9)          &kp LS(N0)    &none
-&none  &bhm LGUI N1      &bhm LALT N2        &bhm LSHFT N3  &bhm LCTRL N4  &kp N5        &kp N6      &bhm LCTRL N7  &bhm RSHFT N8  &bhm LALT N9        &bhm RGUI N0  &none
-&none  &kp GRAVE         &bhm RIGHT_ALT SQT  &kp LC(EQUAL)  &kp LPAR       &kp LBKT      &kp RBKT    &kp RPAR       &kp MINUS      &bhm RIGHT_ALT DOT  &kp BSLH      &none
-                                             &kp ESC        &trans         &none         &none       &none          &none
+&none  &kp INS    &kp DEL    &kp UP     &kp PAGE_UP    &kp LC(Y)            &none  &none      &none      &none     &none       &none
+&none  &kp HOME   &kp LEFT   &kp DOWN   &kp RIGHT      &kp END              &none  &kp RCTRL  &kp RSHFT  &kp LALT  &kp RGUI    &none
+&none  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp PAGE_DOWN  &kp LC(V)            &none  &none      &none      &kp RALT  &kp K_MENU  &none
+                             &kp ESC    &trans         &lt 5 PRINTSCREEN    &none  &none      &none
             >;
         };
 
@@ -83,10 +85,10 @@
         hardware {
             label = "HW";
             bindings = <
-&none  &kp K_PLAY_PAUSE  &none   &none   &none   &none     &bt BT_CLR    &none         &bt BT_PRV    &bt BT_NXT    &none         &none
-&none  &kp K_STOP        &none   &none   &none   &none     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
-&none  &kp F1            &kp F2  &kp F3  &kp F4  &kp F5    &kp F6        &kp F7        &none         &none         &none         &none
-                                 &none   &none   &none     &none         &none         &none
+&none  &kp K_PLAY_PAUSE  &none       &none         &none         &none    &bt BT_CLR    &none         &bt BT_PRV    &bt BT_NXT    &none         &none
+&none  &kp K_STOP        &none       &none         &none         &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
+&none  &kp K_PREV        &kp K_NEXT  &kp C_VOL_DN  &kp C_VOL_UP  &none    &none         &none         &none         &none         &none         &none
+                                     &kp K_MUTE    &none         &none    &none         &none         &none
             >;
         };
 
@@ -101,7 +103,6 @@
         };
     };
 };
-
 &nice_view_spi {
     cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
 };
