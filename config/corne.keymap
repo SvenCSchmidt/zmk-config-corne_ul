@@ -8,7 +8,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <190>;// <---[[moderate duration]]
+            tapping-term-ms = <170>;// <---[[moderate duration]]
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -22,33 +22,68 @@
 
         Cmb_Tilde {
             bindings = <&kp TILDE>;
-            key-positions = <13 36>;
-            layers = <0>;
+            key-positions = <27 25>;
+            layers = <2>;
         };
 
         Umlaut_A {
             bindings = <&kp RA(Q)>;
-            key-positions = <1 2>;
+            key-positions = <2 3>;
+            layers = <0>;
         };
 
         Umlaut_S {
             bindings = <&kp RA(S)>;
             key-positions = <3 4>;
+            layers = <0>;
         };
 
         Umlaut_U {
             bindings = <&kp RA(Y)>;
             key-positions = <7 8>;
+            layers = <0>;
         };
 
         Umlaut_O {
             bindings = <&kp RA(P)>;
-            key-positions = <9 10>;
+            key-positions = <9 8>;
+            layers = <0>;
         };
 
         Euro {
             bindings = <&kp RA(N5)>;
             key-positions = <31 32>;
+            layers = <0>;
+        };
+
+        Cmb_Quote {
+            bindings = <&kp SQT>;
+            key-positions = <9 10>;
+            layers = <0>;
+        };
+
+        Cmb_Tab {
+            bindings = <&kp TAB>;
+            key-positions = <27 28>;
+            layers = <0>;
+        };
+
+        Cmb_Cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <25 26>;
+            layers = <0>;
+        };
+
+        Cmb_Copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <26 27>;
+            layers = <0>;
+        };
+
+        Cmb_Paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <27 29>;
+            layers = <0>;
         };
     };
 
@@ -58,20 +93,20 @@
         base {
             label = "Base";
             bindings = <
-&kp ESC                           &kp Q        &kp W             &kp F              &kp P                &kp B        &kp J        &kp L                 &kp U               &kp Y                  &kp SEMI          &kp APOS
-&kp MINUS                         &bhm LGUI A  &bhm LEFT_ALT R   &bhm LEFT_SHIFT S  &bhm LEFT_CONTROL T  &kp G        &kp M        &bhm RIGHT_CONTROL N  &bhm RIGHT_SHIFT E  &bhm LEFT_ALT I        &bhm RIGHT_WIN O  &kp BSLH
-&bhm LEFT_SHIFT LEFT_PARENTHESIS  &kp Z        &bhm RIGHT_ALT X  &kp C              &kp D                &kp V        &kp K        &kp H                 &kp COMMA           &bhm RIGHT_ALT PERIOD  &kp FSLH          &bhm RIGHT_SHIFT RIGHT_PARENTHESIS
-                                                                 &lt 4 ESC          &kp BSPC             &lt 1 TAB    &lt 2 ENTER  &kp SPACE             &lt 3 DEL
+&kp ESC                           &kp Q        &kp W             &kp F              &kp P                &kp B          &kp J        &kp L                 &kp U               &kp Y                  &kp SEMI          &kp APOS
+&kp MINUS                         &bhm LGUI A  &bhm LEFT_ALT R   &bhm LEFT_SHIFT S  &bhm LEFT_CONTROL T  &kp G          &kp M        &bhm RIGHT_CONTROL N  &bhm RIGHT_SHIFT E  &bhm LEFT_ALT I        &bhm RIGHT_WIN O  &kp BSLH
+&bhm LEFT_SHIFT LEFT_PARENTHESIS  &kp Z        &bhm RIGHT_ALT X  &kp C              &kp D                &kp V          &kp K        &kp H                 &kp COMMA           &bhm RIGHT_ALT PERIOD  &kp FSLH          &bhm RIGHT_SHIFT RIGHT_PARENTHESIS
+                                                                 &lt 4 ESC          &kp BSPC             &lt 1 ENTER    &lt 2 SPACE  &kp DELETE            &none
             >;
         };
 
         nav {
             label = "nav";
             bindings = <
-&none  &kp F11             &kp F12             &kp UP_ARROW          &kp SCROLLLOCK           &kp PAUSE_BREAK    &kp PAGE_UP      &none       &none       &none              &none     &none
-&none  &bhm LEFT_GUI HOME  &bhm LEFT_ALT LEFT  &bhm LEFT_SHIFT DOWN  &bhm LEFT_CONTROL RIGHT  &kp END            &kp PAGE_DOWN    &kp RCTRL   &kp RSHFT   &kp LALT           &kp RGUI  &none
-&none  &kp F1              &bhm RIGHT_ALT F2   &kp F3                &kp F4                   &kp F5             &kp F6           &kp F7      &kp F8      &bhm RIGHT_ALT F9  &kp F10   &none
-                                               &kp ESC               &trans                   &none              &kp PRINTSCREEN  &kp INSERT  &kp DELETE
+&none  &kp ESCAPE      &kp PRINTSCREEN  &kp UP_ARROW  &kp INSERT  &kp PAGE_UP      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4  &none
+&none  &kp HOME        &kp LEFT         &kp DOWN      &kp RIGHT   &kp END          &none         &kp RCTRL     &kp RSHFT     &kp LALT       &kp RGUI      &none
+&none  &kp SCROLLLOCK  &kp PAUSE_BREAK  &kp C_MENU    &kp DELETE  &kp PAGE_DOWN    &none         &bt BT_PRV    &bt BT_NXT    &kp RIGHT_ALT  &none         &none
+                                        &kp ESC       &trans      &none            &mo 3         &none         &bt BT_CLR
             >;
         };
 
@@ -81,42 +116,30 @@
 &none  &kp LS(NUMBER_1)  &kp LS(N2)          &kp LS(N3)     &kp LS(N4)     &kp LS(N5)    &kp LS(N6)  &kp LS(N7)     &kp LS(N8)     &kp LS(N9)          &kp LS(N0)    &none
 &none  &bhm LGUI N1      &bhm LALT N2        &bhm LSHFT N3  &bhm LCTRL N4  &kp N5        &kp N6      &bhm LCTRL N7  &bhm RSHFT N8  &bhm LALT N9        &bhm RGUI N0  &none
 &none  &kp MINUS         &bhm RIGHT_ALT SQT  &kp EQUAL      &kp LPAR       &kp LBKT      &kp RBKT    &kp RPAR       &kp COMMA      &bhm RIGHT_ALT DOT  &kp BSLH      &none
-                                             &kp ESC        &trans         &none         &none       &none          &none
+                                             &kp ESC        &trans         &tog 4        &none       &none          &none
             >;
         };
 
-        iso {
-            label = "ISO";
+        fun {
+            label = "fun";
             bindings = <
-&none  &none      &none  &none                  &none  &none    &none  &none  &kp RA(Y)                &none  &none      &none
-&none  &kp RA(Q)  &none  &bhm LEFT_SHIFT RA(S)  &none  &none    &none  &none  &bhm RIGHT_SHIFT RA(N5)  &none  &kp RA(P)  &none
-&none  &none      &none  &none                  &none  &none    &none  &none  &none                    &none  &none      &none
-                         &none                  &none  &none    &none  &none  &none
+&none  &kp F1        &kp F2         &kp F3          &kp F4            &kp F5     &kp F6   &kp F7             &kp F8           &kp F9         &kp F10        &none
+&none  &kp LEFT_GUI  &kp LEFT_ALT   &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp F11    &kp F12  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &kp LEFT_ALT   &kp RIGHT_GUI  &none
+&none  &none         &kp RIGHT_ALT  &none           &none             &none      &none    &none              &none            &kp RIGHT_ALT  &none          &none
+                                    &none           &none             &none      &none    &none              &none
             >;
         };
 
-        hardware {
-            label = "HW";
+        pad {
+            label = "pad";
             bindings = <
-&none  &none  &none  &none  &none  &none    &bt BT_CLR    &none         &bt BT_PRV    &bt BT_NXT    &none         &none
-&none  &none  &none  &none  &none  &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
-&none  &none  &none  &none  &none  &none    &none         &none         &none         &none         &none         &none
-                     &none  &none  &none    &none         &none         &none
-            >;
-        };
-
-        numpad {
-            label = "Calc";
-            bindings = <
-&none  &none          &none            &none            &none         &none           &none  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &none
-&none  &kp KP_DIVIDE  &kp KP_ASTERISK  &kp KP_SUBTRACT  &kp KP_PLUS   &kp KP_EQUAL    &none  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none            &none
-&none  &none          &none            &none            &kp KP_COMMA  &kp KP_DOT      &none  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER     &none
-                                       &none            &none         &none           &none  &none            &none
+&none  &tog 0  &none  &none  &none          &none        &kp SLASH  &kp N7        &kp N8        &kp N9        &kp MINUS  &none
+&none  &none   &none  &none  &none          &none        &kp STAR   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS   &none
+&none  &none   &none  &none  &none          &none        &none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none      &none
+                      &none  &kp BACKSPACE  &kp ENTER    &kp SPACE  &kp N0        &none
             >;
         };
     };
 };
 
-&nice_view_spi {
-    cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>;
-};
+&nice_view_spi { cs-gpios = <&pro_micro 0 GPIO_ACTIVE_HIGH>; };
