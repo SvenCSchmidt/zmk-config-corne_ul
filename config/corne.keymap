@@ -133,7 +133,7 @@
         pad {
             label = "pad";
             bindings = <
-&none  &tog 0  &none  &none  &none          &none        &kp SLASH  &kp N7        &kp N8        &kp N9        &kp MINUS  &none
+&none  &to 0  &none  &none  &none          &none        &kp SLASH  &kp N7        &kp N8        &kp N9        &kp MINUS  &none
 &none  &none   &none  &none  &none          &none        &kp STAR   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS   &none
 &none  &none   &none  &none  &none          &none        &none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none      &none
                       &none  &kp BACKSPACE  &kp ENTER    &kp SPACE  &kp N0        &none
