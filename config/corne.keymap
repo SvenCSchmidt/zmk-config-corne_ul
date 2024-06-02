@@ -99,7 +99,7 @@
         };
 
         Cmb_CtrlBSPC {
-            bindings = <&kp LC(BSPC)>
+            bindings = <&kp LC(BSPC)>;
             key-positions = <26 27 28>;
             layers = <0>;
         };
