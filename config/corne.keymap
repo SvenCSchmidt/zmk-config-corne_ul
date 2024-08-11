@@ -12,25 +12,45 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <170>;// <---[[moderate duration]]
+            tapping-term-ms = <190>;
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
-        hmg: homerow_mod_gui {
+        hmls: homerow_mod_lshift {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <300>;// <---[[moderate duration]]
+            tapping-term-ms = <190>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30>;
+            bindings = <&kp>, <&kp>;
+        };
+        hmrs: homerow_mod_rshift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <190>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24>;
+            bindings = <&kp>, <&kp>;
+        };
+        hmla: homerow_mod_altl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <400>;
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
-        hma: homerow_mod_alt {
+        hmra: homerow_mod_altr {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <300>;// <---[[moderate duration]]
+            tapping-term-ms = <800>;
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -43,94 +63,125 @@
         compatible = "zmk,combos";
 
         Cmb_Tilde {
-            bindings = <&kp TILDE>;
-            key-positions = <25 26>;
+            bindings = <&kp GRAVE>;
+            key-positions = <20 22>;
             layers = <2>;
         };
 
-        Umlaut_A {
+        vUmlaut_A {
             bindings = <&kp RA(Q)>;
-            key-positions = <2 3>;
+            key-positions = <0 10>;
             layers = <0>;
         };
 
-        Umlaut_S {
+        vUmlaut_S {
             bindings = <&kp RA(S)>;
-            key-positions = <3 4>;
+            key-positions = <2 12>;
             layers = <0>;
         };
 
-        Umlaut_U {
+        vUmlaut_U {
             bindings = <&kp RA(Y)>;
-            key-positions = <7 8>;
+            key-positions = <7 17>;
             layers = <0>;
         };
 
-        Umlaut_O {
+        vUmlaut_O {
             bindings = <&kp RA(P)>;
-            key-positions = <8 9>;
+            key-positions = <9 19>;
             layers = <0>;
         };
 
-        Euro {
+        vEuro {
             bindings = <&kp RA(N5)>;
-            key-positions = <32 33>;
+            key-positions = <17 27>;
             layers = <0>;
         };
 
-        Cmb_Quote {
-            bindings = <&kp SQT>;
-            key-positions = <9 10>;
-            layers = <0>;
+        Cmb_DoubleQuote {
+            bindings = <&kp DQT>;
+            key-positions = <1 11>;
+            layers = <2>;
         };
 
         Cmb_Tab {
             bindings = <&kp TAB>;
-            key-positions = <27 28>;
+            key-positions = <22 23>;
             layers = <0 1 2 4>;
         };
 
         Cmb_Cut {
             bindings = <&kp LC(X)>;
-            key-positions = <25 26>;
+            key-positions = <20 21>;
             layers = <0>;
         };
 
         Cmb_Copy {
             bindings = <&kp LC(C)>;
-            key-positions = <26 27>;
+            key-positions = <21 22>;
             layers = <0>;
         };
 
         Cmb_Paste {
             bindings = <&kp LC(V)>;
-            key-positions = <27 29>;
+            key-positions = <22 24>;
             layers = <0>;
         };
 
         Cmb_Reset {
             bindings = <&bootloader>;
-            key-positions = <14 15 16>;
+            key-positions = <11 12 13>;
             layers = <4>;
         };
 
         Cmb_BSPC {
             bindings = <&kp BSPC>;
-            key-positions = <31 32>;
-            layers = <0>;
+            key-positions = <26 27>;
+            layers = <0 2 4>;
         };
 
         Cmb_CtrlBSPC {
             bindings = <&kp LC(BSPC)>;
-            key-positions = <31 32 33>;
-            layers = <0>;
+            key-positions = <26 27 28>;
+            layers = <0 2>;
         };
 
         Cmb_ESC {
             bindings = <&kp ESC>;
-            key-positions = <1 2>;
+            key-positions = <0 1>;
             layers = <0 1 2 3 4>;
         };
+
+        Cmb_CLCK {
+            bindings = <&kp CLCK>;
+            key-positions = <11 12 13>;
+            layers = <1>;
+        };
+
+        Cmb_LGUI {
+            bindings = <&kp LGUI>;
+            key-positions = <10 20>;
+            layers = <0 2>;
+        };
+
+        Cmb_RGUI {
+            bindings = <&kp RGUI>;
+            key-positions = <19 29>;
+            layers = <0 2>;
+        };
+
+        Cmb_WordLeft {
+            bindings = <&kp LC(LEFT)>;
+            key-positions = <1 2>;
+            layers = <1>;
+        };
+
+        Cmb_WordRight {
+            bindings = <&kp LC(RIGHT)>;
+            key-positions = <2 3>;
+            layers = <1>;
+        };
+
     };
 
     keymap {
@@ -139,10 +190,10 @@
         base {
             label = "Base";
             bindings = <
-                &kp Q        &kp W        &kp F         &kp P         &kp B        &kp J        &kp L         &kp U         &kp Y          &kp SEMI
-                &hmg LGUI A  &hma LALT R  &bhm LSHFT S  &bhm LCTRL T  &kp G        &kp M        &bhm RCTRL N  &bhm RSHFT E  &hma LALT I    &hmg RGUI O
-                &kp Z        &hma RALT X  &kp C         &kp D         &kp V        &kp K        &kp H         &kp COMMA     &hma RALT DOT  &kp FSLH
-                                          &kp ESC       &kp BSPC      &lt 1 RET    &lt 2 SPACE  &kp DEL       &none
+                &kp Q  &kp W         &kp F          &kp P         &kp B        &kp J        &kp L         &kp U          &kp Y           &kp SEMI
+                &kp A  &hmla LALT R  &hmls LSHFT S  &bhm LCTRL T  &kp G        &kp M        &bhm RCTRL N  &hmrs RSHFT E  &hmla LALT I    &kp O
+                &kp Z  &hmra RALT X  &kp C          &kp D         &kp V        &kp K        &kp H         &kp COMMA      &hmra RALT DOT  &kp FSLH
+                                     &kp ESC        &kp BSPC      &lt 1 RET    &lt 2 SPACE  &kp DEL       &none
             >;
         };
 
@@ -159,10 +210,10 @@
         num {
             label = "num";
             bindings = <
-                &kp RS(N1)    &kp RS(N2)     &kp RS(N3)     &kp RS(N4)     &kp RS(N5)    &kp LS(N6)  &kp LS(N7)     &kp LS(N8)     &kp LS(N9)     &kp LS(N0)
-                &hmg LGUI N1  &hma LALT N2   &bhm LSHFT N3  &bhm LCTRL N4  &kp N5        &kp N6      &bhm LCTRL N7  &bhm RSHFT N8  &hma LALT N9   &hmg RGUI N0
-                &kp MINUS     &hma RALT SQT  &kp EQUAL      &kp LPAR       &kp LBKT      &kp RBKT    &kp RPAR       &kp COMMA      &hma RALT DOT  &kp BSLH
-                                             &trans         &trans         &tog 4        &none       &none          &none
+                &kp RS(N1)  &kp RS(N2)      &kp RS(N3)      &kp RS(N4)     &kp RS(N5)    &kp LS(N6)  &kp LS(N7)     &kp LS(N8)      &kp LS(N9)      &kp LS(N0)
+                &kp N1      &hmla LALT N2   &hmls LSHFT N3  &bhm LCTRL N4  &kp N5        &kp N6      &bhm LCTRL N7  &hmrs RSHFT N8  &hmla LALT N9   &kp N0
+                &kp MINUS   &hmra RALT SQT  &kp EQUAL       &kp LPAR       &kp LBKT      &kp RBKT    &kp RPAR       &kp COMMA       &hmra RALT DOT  &kp BSLH
+                                            &trans          &trans         &tog 4        &none       &none          &none
             >;
         };
 
@@ -179,10 +230,10 @@
         pad {
             label = "pad";
             bindings = <
-                &to 0  &none     &none    &none     &none      &kp FSLH   &kp N7  &kp N8  &kp N9  &kp MINUS
-                &none  &none     &none    &none     &none      &kp STAR   &kp N4  &kp N5  &kp N6  &kp PLUS
-                &none  &kp BSPC  &kp DEL  &none     &none      &kp N0     &kp N1  &kp N2  &kp N3  &kp COMMA
-                                 &none    &kp BSPC  &kp RET    &kp SPACE  &none   &none
+                &to 0  &none  &none     &none    &none      &kp FSLH   &kp N7  &kp N8  &kp N9  &kp MINUS
+                &none  &none  &none     &none    &none      &kp STAR   &kp N4  &kp N5  &kp N6  &kp PLUS
+                &none  &none  &kp BSPC  &kp DEL  &none      &kp N0     &kp N1  &kp N2  &kp N3  &kp COMMA
+                              &none     &none    &kp RET    &kp SPACE  &none   &none
             >;
         };
     };
