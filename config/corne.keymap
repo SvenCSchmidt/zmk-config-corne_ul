@@ -4,7 +4,8 @@
 
 / {
     chosen {
-        zmk,matrix_transform = &keymap_transform_1;
+        zmk,kscan = &kscan0;
+        zmk,matrix-transform = &keymap_transform_1;
     };
 
     behaviors {
