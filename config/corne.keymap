@@ -62,9 +62,39 @@
     combos {
         compatible = "zmk,combos";
 
-        Cmb_Grave {
-            bindings = <&kp GRAVE>;
-            key-positions = <25 27>;
+        Cmb_UmlA {
+            bindings = <&kp RA(Q)>;
+            key-positions = <1 13>;
+            layers = <0>;
+        };
+
+        Cmb_UmlO {
+            bindings = <&kp RA(P)>;
+            key-positions = <10 22>;
+            layers = <0>;
+        };
+
+        Cmb_UmlU {
+            bindings = <&kp RA(Y)>;
+            key-positions = <8 20>;
+            layers = <0>;
+        };
+
+        Cmb_UmlS {
+            bindings = <&kp RA(S)>;
+            key-positions = <3 15>;
+            layers = <0>;
+        };
+
+        Cmb_EUR {
+            bindings = <&kp RA(N5)>;
+            key-positions = <20 32>;
+            layers = <0>;
+        };
+
+        Cmb_DQT {
+            bindings = <&kp DQT>;
+            key-positions = <2 14>;
             layers = <2>;
         };
 
@@ -74,46 +104,76 @@
             layers = <2>;
         };
 
-        vUmlaut_A {
-            bindings = <&kp RA(Q)>;
-            key-positions = <1 13>;
-            layers = <0>;
+        Cmb_LSFT {
+            bindings = <&kp LSHFT>;
+            key-positions = <15 16>;
+            layers = <0 2 3>;
         };
 
-        vUmlaut_S {
-            bindings = <&kp RA(S)>;
-            key-positions = <3 15>;
-            layers = <0>;
+        Cmb_RSFT {
+            bindings = <&kp RSHFT>;
+            key-positions = <19 20>;
+            layers = <0 1 2 3>;
         };
 
-        vUmlaut_U {
-            bindings = <&kp RA(Y)>;
-            key-positions = <8 20>;
-            layers = <0>;
+        Cmb_LGUI {
+            bindings = <&kp LGUI>;
+            key-positions = <13 25>;
+            layers = <0 2>;
         };
 
-        vUmlaut_O {
-            bindings = <&kp RA(P)>;
-            key-positions = <10 22>;
-            layers = <0>;
+        Cmb_RGUI {
+            bindings = <&kp RGUI>;
+            key-positions = <22 34>;
+            layers = <0 2>;
         };
 
-        vEuro {
-            bindings = <&kp RA(N5)>;
-            key-positions = <20 32>;
-            layers = <0>;
-        };
-
-        Cmb_DoubleQuote {
-            bindings = <&kp DQT>;
-            key-positions = <2 14>;
-            layers = <2>;
+        Cmb_ESC {
+            bindings = <&kp ESC>;
+            key-positions = <1 2>;
+            layers = <0 1 2 3 4>;
         };
 
         Cmb_Tab {
             bindings = <&kp TAB>;
             key-positions = <28 27>;
             layers = <0 1 2 4>;
+        };
+
+        Cmb_CLCK {
+            bindings = <&kp CLCK>;
+            key-positions = <15 16 19 20>;
+            layers = <1>;
+        };
+
+        Cmb_CLCKs {
+            bindings = <&kp CLCK>;
+            key-positions = <14 15 16>;
+            layers = <1>;
+        };
+
+        Cmb_BSPC {
+            bindings = <&kp BSPC>;
+            key-positions = <31 32>;
+            layers = <0 2 4>;
+        };
+
+        Cmb_CtrlBSPC {
+            bindings = <&kp LC(BSPC)>;
+            key-positions = <31 32 33>;
+            layers = <0 2>;
+        };
+
+        Cmb_WordLeft {
+            bindings = <&kp LC(LEFT)>;
+            key-positions = <14 15>;
+            layers = <1>;
+        };
+
+        Cmb_WordRight {
+            bindings = <&kp LC(RIGHT)>;
+            key-positions = <15 16>;
+            layers = <1>;
         };
 
         Cmb_Cut {
@@ -138,72 +198,6 @@
             bindings = <&bootloader>;
             key-positions = <14 16 15>;
             layers = <4>;
-        };
-
-        Cmb_BSPC {
-            bindings = <&kp BSPC>;
-            key-positions = <31 32>;
-            layers = <0 2 4>;
-        };
-
-        Cmb_CtrlBSPC {
-            bindings = <&kp LC(BSPC)>;
-            key-positions = <31 32 33>;
-            layers = <0 2>;
-        };
-
-        Cmb_ESC {
-            bindings = <&kp ESC>;
-            key-positions = <1 2>;
-            layers = <0 1 2 3 4>;
-        };
-
-        Cmb_CLCKs {
-            bindings = <&kp CLCK>;
-            key-positions = <14 15 16>;
-            layers = <1>;
-        };
-
-        Cmb_CLCK {
-            bindings = <&kp CLCK>;
-            key-positions = <15 16 19 20>;
-            layers = <1>;
-        };
-
-        Cmb_LGUI {
-            bindings = <&kp LGUI>;
-            key-positions = <13 25>;
-            layers = <0 2>;
-        };
-
-        Cmb_RGUI {
-            bindings = <&kp RGUI>;
-            key-positions = <22 34>;
-            layers = <0 2>;
-        };
-
-        Cmb_LSFT {
-            bindings = <&kp LSHFT>;
-            key-positions = <15 16>;
-            layers = <0 2 3>;
-        };
-
-        Cmb_RSFT {
-            bindings = <&kp RSHFT>;
-            key-positions = <19 20>;
-            layers = <0 1 2 3>;
-        };
-
-        Cmb_WordLeft {
-            bindings = <&kp LC(LEFT)>;
-            key-positions = <14 15>;
-            layers = <1>;
-        };
-
-        Cmb_WordRight {
-            bindings = <&kp LC(RIGHT)>;
-            key-positions = <15 16>;
-            layers = <1>;
         };
     };
 
