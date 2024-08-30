@@ -134,7 +134,7 @@
             layers = <0 1 2 3 4>;
         };
 
-        Cmb_Tab {
+        Cmb_TAB {
             bindings = <&kp TAB>;
             key-positions = <28 27>;
             layers = <0 1 2 4>;
@@ -158,9 +158,21 @@
             layers = <0 2 4>;
         };
 
+        Cmb_DEL {
+            bindings = <&kp DEL>;
+            key-positions = <32 33>;
+            layers = <0 2 4>;
+        };
+
         Cmb_CtrlBSPC {
             bindings = <&kp LC(BSPC)>;
             key-positions = <31 32 33>;
+            layers = <0 2>;
+        };
+
+        Cmb_CtrlDEL {
+            bindings = <&kp LC(DEL)>;
+            key-positions = <32 33 34>;
             layers = <0 2>;
         };
 
